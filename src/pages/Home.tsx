@@ -1,7 +1,11 @@
-function Home() {
+import Title from "../components/common/Title";
 
+function Home() {
     return (
         <>
+            <Title size="md" color="background">
+                제목 테스트
+            </Title>
             <div>home body</div>
         </>
     );
