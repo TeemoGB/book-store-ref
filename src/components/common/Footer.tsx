@@ -4,7 +4,7 @@ import styled from "styled-components";
 function Footer() {
     return (
         <FooterStyle>
-            <h1>{/* <img src={logo} alt='book store' /> */}</h1>
+            <h1>로고{/* <img src={logo} alt='book store' /> */}</h1>
             <div>copyright(c), 2026, Book Store.</div>
         </FooterStyle>
     );
