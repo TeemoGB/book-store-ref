@@ -1,10 +1,12 @@
 import styled from "styled-components";
-// import logo from '../../assets/im
+import logo from "../../assets/images/logo.png";
 
 function Footer() {
     return (
         <FooterStyle>
-            <h1>로고{/* <img src={logo} alt='book store' /> */}</h1>
+            <h1 className="logo">
+                <img src={logo} alt="book store" />
+            </h1>
             <div>copyright(c), 2026, Book Store.</div>
         </FooterStyle>
     );

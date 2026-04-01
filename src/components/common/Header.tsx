@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-// import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo.png';
 import { FaSignInAlt, FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useCategory } from "../../hooks/useCategory";
@@ -12,9 +12,9 @@ function Header() {
 
     return (
         <HeaderStyle>
-            <h1>
+            <h1 className='logo'>
                 <Link to="/">
-                    로고{/* <img src={logo} alt='book store' /> */}
+                    <img src={logo} alt='book store' />
                 </Link>
             </h1>
 
