@@ -11,6 +11,7 @@ function Layout({ children }: LayoutProps) {
         <>
             <Header />
             <LayoutStyle>{children}</LayoutStyle>
+            <hr />
             <Footer />
         </>
     );
