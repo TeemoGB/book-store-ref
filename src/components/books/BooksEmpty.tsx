@@ -1,10 +1,40 @@
+import { FaSmileWink } from "react-icons/fa";
 import styled from "styled-components";
+import Title from "../common/Title";
+import { Link } from "react-router-dom";
+
+const SmileWinkIcon = FaSmileWink as React.FC;
+
 function BooksEmpty() {
     return (
-        <div>
-            <h1>BooksEmpty</h1>
-        </div>
+        <BooksEmptyStyle>
+            <div className="icon">
+                <SmileWinkIcon />
+            </div>
+            <Title size='lg' color='primary' >
+                검색 결과가 없습니다.
+            </Title>
+            <p>
+                <Link to='/books'>전체 검색 결과로 이동</Link>
+            </p>
+        </BooksEmptyStyle>
     );
 }
-const BooksEmptyStyle = styled.div``;
+
+const BooksEmptyStyle = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 120px 0;
+
+    .icon {
+        svg {
+            font-size: 4rem;
+            fill: #ccc;
+        }
+    }
+`;
+
 export default BooksEmpty;
