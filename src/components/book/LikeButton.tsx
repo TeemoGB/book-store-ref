@@ -1,0 +1,38 @@
+import styled from "styled-components";
+import { BookDetail } from "../../models/book.model";
+import Button from "../common/Button";
+import { FaHeart } from "react-icons/fa";
+
+const HeartIcon = FaHeart as React.FC;
+
+interface Props {
+    book: BookDetail;
+    onClick: () => void;
+}
+
+function LikeButton({ book, onClick }: Props) {
+    return (
+        <LikeButtonStyle
+            size="md"
+            scheme={book.liked ? "like" : "normal"}
+            onClick={onClick}
+        >
+            <HeartIcon />
+            {book.likes}
+        </LikeButtonStyle>
+    );
+}
+
+const LikeButtonStyle = styled(Button)`
+    display: flex;
+    gap: 6px;
+
+    svg {
+        color: inherit;
+        * {
+            color: inherit;
+        }
+    }
+`;
+
+export default LikeButton;
