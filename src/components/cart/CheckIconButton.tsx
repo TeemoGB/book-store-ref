@@ -17,6 +17,15 @@ function CheckIconButton({ isChecked, onCheck }: Props) {
     );
 }
 
-const CheckIconButtonStyle = styled.div``;
+const CheckIconButtonStyle = styled.div`
+    background: none;
+    border: 0;
+    cursor: pointer;
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+`;
 
 export default CheckIconButton;
